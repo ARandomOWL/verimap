@@ -48,6 +48,8 @@ KEY_PARAMETER      parameter
 KEY_ASSIGN         assign
 KEY_IF             if
 KEY_ELSE           else
+KEY_SUPPLY1        supply1
+KEY_SUPPLY0        supply0
 
 KEY_SPECIFY        specify
 KEY_ENDSPECIFY     endspecify
@@ -111,6 +113,14 @@ int specify_depth = 0;
 <IGNORE_LINE>\n    {
   DEBUG_LEX_MESSAGE("IGNORE_LINE\n");
   BEGIN INITIAL;
+}
+
+{KEY_SUPPLY1}           {
+  BEGIN IGNORE_LINE;
+}
+
+{KEY_SUPPLY0}           {
+  BEGIN IGNORE_LINE;
 }
 
 {KEY_IF}           {
