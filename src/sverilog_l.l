@@ -50,6 +50,7 @@ KEY_IF             if
 KEY_ELSE           else
 KEY_SUPPLY1        supply1
 KEY_SUPPLY0        supply0
+KEY_TRI1           tri1
 
 KEY_SPECIFY        specify
 KEY_ENDSPECIFY     endspecify
@@ -115,11 +116,15 @@ int specify_depth = 0;
   BEGIN INITIAL;
 }
 
-{KEY_SUPPLY1}           {
+{KEY_SUPPLY1}      {
   BEGIN IGNORE_LINE;
 }
 
-{KEY_SUPPLY0}           {
+{KEY_SUPPLY0}      {
+  BEGIN IGNORE_LINE;
+}
+
+{KEY_TRI1}         {
   BEGIN IGNORE_LINE;
 }
 
