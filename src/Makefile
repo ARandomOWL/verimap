@@ -1,6 +1,7 @@
 CC = g++
 CFLAGS = -Wno-write-strings -Wno-deprecated
-LDFLAGS = -static -s
+# LDFLAGS = -s
+LDFLAGS =
 LIBS =
 YACC = bison
 YFLAGS= -d
